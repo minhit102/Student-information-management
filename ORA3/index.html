@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="design.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+    <title>CTTBK.MainPage</title>
+    <style>
+        body.shimeji-pinned iframe {
+            pointer-events: none;
+        }
+
+        body.shimeji-select-ie {
+            cursor: cell !important;
+        }
+
+        #shimeji-contextMenu::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #shimeji-contextMenu::-webkit-scrollbar-thumb {
+            background-color: rgba(30, 30, 30, 0.6);
+            border-radius: 3px;
+        }
+
+        #shimeji-contextMenu::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="./sinhvien.js">
+    </script>
+    <header>
+        <div id="ctl00_ctl00_HeaderPane_EB" class="dxpnl-bar dxpnlControl_Mulberry headerPane"
+            style="width:100%;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;">
+            <div class="logo-container">
+                <a>
+                    <img class="dxeImage_Mulberry" id="ctl00_ctl00_HeaderPane_EBT_imgLogo"
+                        src="./Contents/Images/logo-cttdt.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div id="ctl00_ctl00_TopMenuPane_EB" class="dxpnl-bar dxpnlControl_Mulberry topMenuExpandBar">
+            <div id="ctl00_ctl00_TopMenuPane_EBB" class="dxpnl-btn dxpnl-fp">
+                <div class="menu">
+                    <span>Đào tạo đại học</span>
+                    <span>Đào tạo sau đại học</span>
+                    <span>Công tác sinh viên</span>
+                    <span>Tra cứu văn bằng</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dxpnl-acc">
+            <table class="dxpnlControl_Mulberry leftMenuPanel" id="ctl00_ctl00_contentPane_MainPanel_leftMenuPane">
+                <tbody>
+                    <tr>
+                        <td style="vertical-align: top; margin: 0px;">
+                            <div id="ctl00_ctl00_contentPane_MainPanel_leftMenuPane_EB"
+                                class="dxpnl-bar dxpnlControl_Mulberry LeftMenuExpandBar">
+                                <div id="ctl00_ctl00_contentPane_MainPanel_leftMenuPane_EBB" class="dxpnl-btn dxpnl-fp"
+                                    style="margin-top: -12px;">
+                                    <img id="ctl00_ctl00_contentPane_MainPanel_leftMenuPane_EBBI"
+                                        class="dxWeb_pnlExpand_Mulberry" src="/DXR.axd?r=1_87-Yk9Cr" alt="">
+                                </div>
+                            </div>
+                            <div class="dxpnlControl_Mulberry leftMenuPanel"
+                                id="ctl00_ctl00_contentPane_MainPanel_leftMenuPane">
+                                <div class="dxpnl-acc">
+
+                                    <div style="width: 285px; padding-top: 10px;">
+                                        <div class="l39contentLeft">
+                                            <br><br><br>
+                                            <div class="l39LeftMain">
+                                                <div
+                                                    style="justify-content: center; display: flex; gap: 5px; align-items: center;">
+                                                    <h3><img src="./Contents/Images/anhDaiDien.png"
+                                                            style="width:30px;height:30px;border-radius: 50%; text-align: right;">
+
+                                                    </h3>
+                                                    <h3>HOÀNG TRỌNG MINH</h3>
+                                                </div>
+                                                <ul class="siteMap">
+                                                    <li><a>Thư báo </a></li>
+                                                    <li><a>Đổi mật khẩu</a></li>
+                                                    <li><a>Cấp lại
+                                                            mật khẩu Email trường</a></li>
+                                                    <li><a>Thoát đăng nhập</a></li>
+                                                    <li><a>Thông tin mật
+                                                            khẩu Email cấp mới</a></li>
+                                                    <li><a>Xác nhận khai báo y
+                                                            tế</a></li>
+                                                </ul>
+                                            </div>
+                                        </div><br>
+                                        <div class="l39contentLeft">
+                                            <div class="l39LeftMain">
+                                                <h3>Quản lý hồ sơ sinh viên</h3>
+                                                <ul class="siteMap">
+                                                    <li><a>Thông tin sinh viên</a></li>
+                                                    <li><a>Cập nhật thông
+                                                            tin cá nhân</a></li>
+                                                    <li><a>Thông tin lớp sinh
+                                                            viên</a></li>
+                                                </ul>
+                                            </div>
+                                        </div><br>
+                                        <div class="l39contentLeft">
+                                            <div class="l39LeftMain">
+                                                <h3>Đào tạo</h3>
+                                                <ul class="siteMap">
+                                                    <li class="cosub"><a>Chương trình đào
+                                                            tạo</a>
+                                                        <ul class="subSitemap">
+                                                            <li><a>Chương trình
+                                                                    đào tạo sinh viên</a></li>
+                                                            <li><a>Danh mục học phần</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="cosub"><a>Kế hoạch học tập</a>
+                                                        <ul class="subSitemap">
+                                                            <li><a>Đăng ký học
+                                                                    phần</a></li>
+                                                            <li><a>Thời khóa biểu</a>
+                                                            </li>
+                                                            <li><a>Tra cứu đăng ký
+                                                                    lớp các kỳ</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="cosub"><a>Kết quả học tập</a>
+                                                        <ul class="subSitemap">
+                                                            <li><a>Kết quả thi
+                                                                    TOEIC</a></li>
+                                                            <li><a>Bảng điểm
+                                                                    cá nhân</a></li>
+                                                            <li><a>Bảng điểm
+                                                                    học phần</a></li>
+                                                            <li><a>Kiểm
+                                                                    tra nhập điểm kỳ mới nhất</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="cosub"><a>Đồ án - Tốt
+                                                            nghiệp</a>
+                                                        <ul class="subSitemap">
+                                                            <li><a>Kết
+                                                                    quả xét nhận ĐATN</a></li>
+                                                            <li><a>Đăng ký xét
+                                                                    tốt nghiệp</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a>Thời khóa biểu tạm
+                                                            thời</a></li>
+                                                </ul>
+                                            </div>
+                                        </div><br>
+                                        <div class="l39contentLeft">
+                                            <div class="l39LeftMain">
+                                                <h3>Tư vấn trực tuyến</h3>
+                                                <ul class="siteMap">
+                                                    <li><a>Hỏi đáp - Tư vấn trực tuyến</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><br>
+                                        <div class="l39contentLeft">
+                                            <div class="l39LeftMain">
+                                                <h3>Tài chính học vụ</h3>
+                                                <ul class="siteMap">
+                                                    <li><a>Thông tin công nợ học
+                                                            phí</a></li>
+                                                    <li><a>Thanh toán học phí
+                                                            trực tuyến</a></li>
+                                                </ul>
+                                            </div>
+                                        </div><br>
+                                        <div class="l39contentLeft">
+                                            <div class="l39LeftMain">
+                                                <h3>Dịch vụ hành chính</h3>
+                                                <ul class="siteMap">
+                                                    <li><a>ĐK cấp
+                                                            giấy tờ</a></li>
+                                                </ul>
+                                            </div>
+                                        </div><br>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td
+                            style="width: 100%; vertical-align: top; margin: 0px;padding-left: 200px;padding-top: 50px; ">
+                            <div class="thongTinCaNhan" id="thongTinCaNhanPDF">
+                                <div style="display : flex ; margin-top: 30px;">
+                                    <h3
+                                        style="color :  #105694 ; font-size: 21px; font-weight: bold;text-align: center;  margin-left: 300px;">
+                                        THÔNG TIN CÁ NHÂN</h3>
+                                    <button onclick="downloadPDF()"
+                                        style=" margin-left :10px;background-color: white ; border : none"><img
+                                            src="./Contents/Images/footer.jpg"
+                                            style="height:25px ; background-color: white;  " ;>
+                                    </button>
+                                </div>
+
+
+
+                                <div style="border : solid 1px orange ; margin: 50px;padding: 15px;">
+                                    <div id="nameGroup" style="display : flex ;">
+                                        <p id="groupMain" style="color :  #105694 ; font-size: 16px;font-weight: bold; "
+                                            ondblclick="EditingMain()">
+                                            Thông tin sinh viên_20215427
+                                        </p>
+                                        <button
+                                            style="margin-left :30px;background-color: white ; border : solid 1px ; font-weight: bold "
+                                            onclick="fcaddItem()">
+                                            Add info Item
+                                        </button>
+                                        <button
+                                            style=" margin-left :30px;background-color: white ; border : solid 1px  ;font-weight: bold"
+                                            onclick="fcaddGroup()">
+                                            Add group Item
+                                        </button>
+                                    </div>
+                                    <div id="addItemMain"></div>
+                                </div>
+
+
+
+
+                                <div class="addGroupItem" id="addGroupItem">
+
+                                </div>
+
+
+
+                            </div>
+
+        </div>
+
+
+        <!--<div class="MainContentTitle">
+                                <br>
+                                <h3>THÔNG TIN CÁ NHÂN</h3> <br>
+                                <hr>
+                            </div>
+                            <div class="MainContent">
+
+                                <div class="row">
+                                    <span class="dxeBase_Mulberry Title" style="display: flex; width : 60%"
+                                        id="ctl00_ctl00_contentPane_MainPanel_MainContent_lbt1">THÔNG TIN SINH VIÊN
+                                        <button id="btn2" class="btn2" style="border: none;
+                                            background-color: white;" onclick="edit()">
+                                            <i class="bi bi-pencil-square bi-3x"></i>
+                                        </button>
+
+                                    </span>
+                                    <div class="addButton" id="addButton" style=" width: 40%; display : none ; ">
+                                        <button class="buttonOK" onclick="myFunctionOK()">OK</button>
+                                        <button class="buttonCancel" onclick="myFunctionCancel()">Cancel</button>
+                                        <button class="buttonReset" onclick="myFunctionReset()">Reset</button>
+                                    </div>
+
+                                    <hr>
+                                </div>
+
+                                <div class="hr"></div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="dxeBase_Mulberry normalText"
+                                            id="ctl00_ctl00_contentPane_MainPanel_MainContent_lbTextInfo1"><strong
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px;font-weight: normal; font-style: italic;">Họ
+                                                và
+                                                tên : </strong><span id="HoTen"
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px; font-weight: bold;"></span><br>
+                                            <strong
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px;font-weight: normal; font-style: italic;">Năm
+                                                vào trường :
+                                            </strong><span id="NamVaoTruong"
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px; font-weight: bold;"></span><br>
+                                            <strong
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px;font-weight: normal; font-style: italic;">Bậc
+                                                đào tạo : </strong><span id="BacDaoTao"
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px; font-weight: bold;">
+                                            </span>
+                                            <br>
+                                            <strong
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px;font-weight: normal; font-style: italic;">Chương
+                                                trình : </strong><span id="ChuongTrinh"
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px; font-weight: bold;"></span><br>
+                                            <strong
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px;font-weight: normal; font-style: italic;">Khoa/Viện
+                                                quản lý : </strong><span id="Khoa"
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px; font-weight: bold;"></span><br>
+                                            <strong
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px;font-weight: normal; font-style: italic;">Tình
+                                                trạng học tập : </strong><span id="TinhTrangHocTap"
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px; font-weight: bold;"></span><br></span>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="dxeBase_Mulberry normalText"
+                                            id="ctl00_ctl00_contentPane_MainPanel_MainContent_lbTextInfo2"><strong
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px;font-weight: normal; font-style: italic;">Giới
+                                                tính : </strong>
+                                            <span id="GioiTinh"
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px; font-weight: bold;">
+                                            </span><br>
+                                            <strong
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px;font-weight: normal; font-style: italic;">Lớp :
+                                            </strong>
+                                            <span id="Lop"
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px; font-weight: bold;"></span><br>
+                                            <strong
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px;font-weight: normal; font-style: italic;">Khóa
+                                                học : </strong>
+                                            <span id="KhoaHoc"
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px; font-weight: bold;"></span><br>
+                                            <strong
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px;font-weight: normal; font-style: italic;">Email :
+                                            </strong>
+                                            <span id="Email"
+                                                style="font-family: 'Times New Roman', Times; font-size: 14px; font-weight: bold;"></span><br></span>
+                                        
+                                    </div>
+                                    <script src="sinhvien.js">   
+                                    </script>
+                                </div>
+                                
+                               
+
+                                <div class="row">
+                                    <span class="dxeBase_Mulberry Title"
+                                        id="ctl00_ctl00_contentPane_MainPanel_MainContent_lbT2">THÔNG TIN HỌC TẬP</span>
+                                </div>
+
+                                <div class="hr"></div>
+
+                                <div class="row">
+                                    <span class="dxeBase_Mulberry Title"
+                                        id="ctl00_ctl00_contentPane_MainPanel_MainContent_lbT3">THÔNG TIN CÁ NHÂN</span>
+                                </div>
+
+                                <div class="hr"></div>
+                                <br>
+                                <br>
+
+                            </div>-->
+        </td>
+
+
+        </tr>
+
+        </tbody>
+        </table>
+        </div>
+    </header>
+    <script>
+        window.jsPDF = window.jspdf.jsPDF;
+        var docPDF = new jsPDF();
+
+        function downloadPDF(invoiceNo) {
+
+            var elementHTML = document.querySelector("#thongTinCaNhanPDF");
+            docPDF.html(elementHTML, {
+                callback: function (docPDF) {
+                    docPDF.save(invoiceNo + '.pdf');
+                },
+                x: 15,
+                y: 15,
+                width: 150,
+                windowWidth: 650
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>
